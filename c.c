@@ -1018,7 +1018,7 @@ void rand_init_fallback(void)
 
 int main(int argc, char* argv[])
 {
-    if (!rand_init())
+    if (rand_init() != 0)
     {
         rand_init_fallback();
     }
